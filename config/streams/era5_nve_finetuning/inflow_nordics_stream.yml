@@ -1,0 +1,92 @@
+CaravanCamels:
+  type : obs
+  stream_id: 2
+  filenames : ['/e/data1/slmet/sk_data/inflow_nordics_obs.zarr']
+  base_datetime : '2001-01-01T00:00:00'
+  coords_channels : ['lat', 'lon']
+  source:
+    - 'obsvalue_10m_u_component_of_wind_mean_0'
+    - 'obsvalue_10m_u_component_of_wind_variance_0'
+    - 'obsvalue_10m_v_component_of_wind_mean_0'
+    - 'obsvalue_10m_v_component_of_wind_variance_0'
+    - 'obsvalue_2m_dewpoint_temperature_mean_0'
+    - 'obsvalue_2m_dewpoint_temperature_variance_0'
+    - 'obsvalue_2m_temperature_era5land_mean_0'
+    - 'obsvalue_2m_temperature_era5land_variance_0'
+    - 'obsvalue_evaporation_mean_0'
+    - 'obsvalue_evaporation_variance_0'
+    - 'obsvalue_maximum_2m_temperature_since_previous_post_processing_mean_0'
+    - 'obsvalue_maximum_2m_temperature_since_previous_post_processing_variance_0'
+    - 'obsvalue_mean_surface_downward_short_wave_radiation_flux_mean_0'
+    - 'obsvalue_mean_surface_downward_short_wave_radiation_flux_variance_0'
+    - 'obsvalue_minimum_2m_temperature_since_previous_post_processing_mean_0'
+    - 'obsvalue_minimum_2m_temperature_since_previous_post_processing_variance_0'
+    - 'obsvalue_potential_evaporation_mean_0'
+    - 'obsvalue_potential_evaporation_variance_0'
+    - 'obsvalue_surface_net_solar_radiation_mean_0'
+    - 'obsvalue_surface_net_solar_radiation_variance_0'
+    - 'obsvalue_surface_net_thermal_radiation_mean_0'
+    - 'obsvalue_surface_net_thermal_radiation_variance_0'
+    - 'obsvalue_surface_pressure_mean_0'
+    - 'obsvalue_surface_pressure_variance_0'
+    - 'obsvalue_total_precipitation_mean_0'
+    - 'obsvalue_total_precipitation_variance_0'
+  target:
+    - 'obsvalue_discharge_0'
+  geoinfo_channels:
+    - 'eccentricity'
+    - 'area_km2'
+    - 'elev_min'
+    - 'elev_max'
+    - 'elev_mean'
+    - 'elev_median'
+    - 'elev_std'
+    - 'slope_max'
+    - 'slope_mean'
+    - 'slope_median'
+    - 'slope_std'
+    - 'urban_areas_frac'
+    - 'agriculture_frac'
+    - 'forest_frac'
+    - 'grassland_frac'
+    - 'moors_and_heathland_frac'
+    - 'woodland_shrubs_frac'
+    - 'sand_frac'
+    - 'bare_rocks_frac'
+    - 'sparsely_vegetated_frac'
+    - 'glacier_frac'
+    - 'peat_bogs_and_marshes_frac'
+    - 'water_bodies_frac'
+    - 'p_mean'
+    - 'pet_mean'
+    - 'aridity'
+    - 'frac_snow'
+    - 'moisture_index'
+    - 'seasonality'
+    - 'high_prec_freq'
+    - 'high_prec_dur'
+    - 'low_prec_freq'
+    - 'low_prec_dur'
+    - 'QA_internal'
+    - 'QA_value'
+    - 'Regulated'
+  masking_rate : 0.6
+  masking_rate_none : 0.05
+  token_size : 8
+  tokenize_spacetime : True    
+  max_num_targets: -1
+  embed : 
+    net : transformer
+    num_tokens : 1
+    num_heads : 8
+    dim_embed : 512
+    num_blocks : 2
+  embed_target_coords : 
+    net : linear
+    dim_embed : 512
+  target_readout :
+    num_layers : 2
+    num_heads : 4
+  pred_head : 
+    ens_size : 1
+    num_layers : 1
