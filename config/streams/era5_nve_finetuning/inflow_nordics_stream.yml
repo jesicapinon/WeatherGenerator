@@ -4,33 +4,6 @@ CaravanCamels:
   filenames : ['/e/data1/slmet/sk_data/inflow_nordics_obs.zarr']
   base_datetime : '2001-01-01T00:00:00'
   coords_channels : ['lat', 'lon']
-  source:
-    - 'obsvalue_10m_u_component_of_wind_mean_0'
-    - 'obsvalue_10m_u_component_of_wind_variance_0'
-    - 'obsvalue_10m_v_component_of_wind_mean_0'
-    - 'obsvalue_10m_v_component_of_wind_variance_0'
-    - 'obsvalue_2m_dewpoint_temperature_mean_0'
-    - 'obsvalue_2m_dewpoint_temperature_variance_0'
-    - 'obsvalue_2m_temperature_era5land_mean_0'
-    - 'obsvalue_2m_temperature_era5land_variance_0'
-    - 'obsvalue_evaporation_mean_0'
-    - 'obsvalue_evaporation_variance_0'
-    - 'obsvalue_maximum_2m_temperature_since_previous_post_processing_mean_0'
-    - 'obsvalue_maximum_2m_temperature_since_previous_post_processing_variance_0'
-    - 'obsvalue_mean_surface_downward_short_wave_radiation_flux_mean_0'
-    - 'obsvalue_mean_surface_downward_short_wave_radiation_flux_variance_0'
-    - 'obsvalue_minimum_2m_temperature_since_previous_post_processing_mean_0'
-    - 'obsvalue_minimum_2m_temperature_since_previous_post_processing_variance_0'
-    - 'obsvalue_potential_evaporation_mean_0'
-    - 'obsvalue_potential_evaporation_variance_0'
-    - 'obsvalue_surface_net_solar_radiation_mean_0'
-    - 'obsvalue_surface_net_solar_radiation_variance_0'
-    - 'obsvalue_surface_net_thermal_radiation_mean_0'
-    - 'obsvalue_surface_net_thermal_radiation_variance_0'
-    - 'obsvalue_surface_pressure_mean_0'
-    - 'obsvalue_surface_pressure_variance_0'
-    - 'obsvalue_total_precipitation_mean_0'
-    - 'obsvalue_total_precipitation_variance_0'
   target:
     - 'obsvalue_discharge_0'
   geoinfo_channels:
