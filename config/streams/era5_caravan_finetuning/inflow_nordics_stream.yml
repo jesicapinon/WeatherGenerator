@@ -1,8 +1,10 @@
 CaravanCamels:
   type : obs
   stream_id: 2
-  filenames : ['/e/project1/e-aif-2026sc02-173/sk_data/inflow_nordics_obs_mmh.zarr']
-  base_datetime : '2001-01-01T00:00:00'
+  #filenames : ['/e/data1/slmet/sk_data/caravan/inflow_br_obs.zarr','/e/data1/slmet/sk_data/caravan/inflow_usa_obs.zarr']
+  #filenames : ['/e/scratch/e-aif-2026sc02-173/nordhagen1/ap17/output/netcdf.zarr']
+  filenames : ['/e/project1/e-aif-2026sc02-173/sk_data/inflow_usa_obs_mmh.zarr','/e/project1/e-aif-2026sc02-173/sk_data/inflow_br_obs_mmh.zarr']
+  base_datetime : '1951-01-01T00:00:00'
   coords_channels : ['lat', 'lon']
   target:
     - 'obsvalue_streamflow_0'

@@ -1,7 +1,7 @@
 CaravanCamels:
   type : obs
   stream_id: 2
-  filenames : ['/e/project1/e-aif-2026sc02-173/sk_data/inflow_nordics_obs_mmh.zarr']
+  filenames : ['/e/project1/e-aif-2026sc02-173/sk_data/inflow_nordics_obs.zarr']
   base_datetime : '2001-01-01T00:00:00'
   coords_channels : ['lat', 'lon']
   target:
@@ -13,6 +13,21 @@ CaravanCamels:
     - 'ele_mt_smn'
     - 'ele_mt_smx'
     - 'frac_snow'
+
+    #- 'low_prec_dur'
+    #- 'high_prec_freq'
+    #- 'high_prec_dur'
+    #- 'low_prec_freq'
+    #- 'p_mean'
+    #- 'urb_pc_sse'
+    #- 'for_pc_sse'
+    #- 'gla_pc_sse'
+    #- 'snd_pc_sav'
+    #- 'ire_pc_sse'
+    #- 'ari_ix_sav'
+    #- 'cmi_ix_syr'
+    #- 'pet_mean_ERA5_LAND'
+    #- 'seasonality_ERA5_LAND'
   masking_rate : 0.6
   masking_rate_none : 0.05
   token_size : 8

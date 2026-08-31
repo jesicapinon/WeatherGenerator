@@ -1,34 +1,35 @@
 global_plotting_options:
   image_format : "png" #options: "png", "pdf", "svg", "eps", "jpg" ..
-  regions: ["global"]
+  regions: ["nordics"]
   dpi_val : 300
   CaravanCamels:
     marker_size: 4
 
 evaluation:
-  metrics  : ["froct", "rmse"]
-  regions: ["global"]
+  metrics  : ["nse","rmse"]
+  regions: ["nordics"]
   summary_plots : true
   summary_dir: "./plots/"
   print_summary: false #print out score values on screen. it can be verbose
-  plot_score_maps: false
+  plot_score_maps: true
   log_scale: false
   add_grid: true
 
 run_ids :
-  v3o8yd6t:
-    label: "Finetune-test v3o8yd6t"
+  #x59txlvd:
+  kix5mlag:
+    label: "kix5mlag"
     epoch: 0
     rank: 0
     streams:
       CaravanCamels:
-        channels: ["obsvalue_discharge_0"]
+        channels: ["obsvalue_streamflow_0"]
         evaluation:
           sample: "all"
           forecast_step: "all"
         plotting:
           sample: [0]
           forecast_step: 1-39
-          plot_maps: false
-          plot_animations: false
+          plot_maps: true
+          plot_animations: true
           plot_histograms: true
